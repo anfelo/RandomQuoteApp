@@ -1,0 +1,188 @@
+/* =================================
+  Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Palanquin', sans-serif;
+  color: #4c4c4c;
+  background: #f8fdf3;
+}
+h1,
+p,
+form button {
+  color: white;
+}
+header h1 {
+  font-family: 'Courgette', cursive;
+  text-shadow: 0 1px 0 rgba(0,0,0, .4);
+  line-height: .65;
+  margin-top: .5em;
+  margin-bottom: 25px;
+}
+h2 {
+  margin: 0 0 .2em;
+}
+header p {
+  font-size: 1.1em;
+  text-shadow: 0 1px 0 rgba(0,0,0, .25);
+}
+form {
+  width: 30%;
+  height: 50px;
+  background: white;
+  display: inline-block;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: flex;
+  border-radius: .2em;
+  border: solid 2px white;
+  box-shadow: 0 1px 14px rgba(0,0,0, .12);
+}
+form button {
+  padding: .2em;
+  font-size: 1.5em;
+  background: #7bcbc4;
+  border-radius: .2em;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+#go-btn {
+  width: 70%;
+}
+#tweet-btn {
+  width: 29%;
+  margin-left: 1%;
+  border-radius: .2em;
+  background-color: #00aced;
+  padding: 0;
+}
+#go-btn:hover,
+#tweet-btn:hover {
+  opacity: .7;
+}
+#tweet-btn img{
+  height: 100%;
+  width: auto;
+}
+#tweet-btn.disabled {
+  background-color: #cccccc;
+  pointer-events: none;
+}
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7)
+}
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 2.5em auto;
+  border-radius: .35em;
+  background: #fcfcfc;
+  overflow: hidden;
+  box-shadow: 0 0 26px rgba(0,0,0, .13);
+}
+.quote-container {
+  display: block;
+  width: 60%;
+  margin: 5% auto;
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: medium;
+}
+.author {
+    text-align: right;
+    margin: 20px 0;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+  header {
+    padding: 1.25em;
+  }
+  h1 {
+    font-size: 3em;
+    margin: .3em 0 0;
+  }
+  ul li {
+    margin-bottom: 1em;
+  }
+  form {
+    width: 95%;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 2.5em;
+  }
+  #go-btn {
+    width: 80%;
+  }
+  #tweet-btn {
+    width: 20%;
+  }
+  .wrapper {
+    margin: 0;
+  }
+  .main {
+    padding: 2em 1em .75em;
+  }
+  .quote-container {
+  width: 80%;
+  }
+}
+
+@media (min-width: 769px) {
+  header {
+    height: 280px;
+    padding: 2.5em 1em 1em;
+    background-position: 0 -95px;
+  }
+  h1 {
+    font-size: 5.8em;
+  }
+  h2 {
+    float: none;
+    font-size: 1.9em;
+  }
+  form {
+    margin: 3.5em auto 0;
+    z-index: 3000;
+    position: relative;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  .main {
+    padding: 2em 1.5em .75em;
+    position: relative;
+    z-index: 10;
+  }
+  ul {
+    display: -webkit-flex;
+    display: flex;
+    clear: both;
+
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 1.25em;
+  }
+  ul li {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 47.5%;
+    flex-basis: 47.5%;
+    margin: 0 1.25% 1em;
+  }
+}
+@media (min-width: 880px) {
+}
